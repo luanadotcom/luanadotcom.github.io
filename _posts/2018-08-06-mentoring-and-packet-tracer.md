@@ -30,7 +30,6 @@ rpmbuild -bb openssl-lib-compat-1.0.0.spec
 error: Failed build dependencies:
 	perl is needed by openssl-lib-compat-1:1.0.0i-1.fc28.x86_64
 ```
-
   Which I easily fixed installing Perl:
   ```bash
   dnf install perl
@@ -80,21 +79,18 @@ This step will bring the EULA to be accepted (enter `Y` to accept it) and will a
 ```bash
 sudo chmod +x /opt/pt/set_ptenv.sh
 sudo chmod +x /opt/pt/set_qtenv.sh
+sudo /opt/pt/set_ptenv.sh
+sudo /opt/pt/set_qtenv.sh
 ```
-
-  ```bash
-  sudo /opt/pt/set_ptenv.sh
-  sudo /opt/pt/set_qtenv.sh
-  ```
 8. Final dependencies to be met - this is using [robertpro's](https://github.com/robertpro/) tips to install Packet Tracer to Fedora 26 - all credits to him!
-  ```bash
-  mkdir ~/.lib64
-  wget https://github.com/robertpro/tips/raw/59d14e7b148ebd10698ad3621b4c8a0bad38844b/packet_tracer_fedora26/libicudata.so.52 -O ~/.lib64/libicudata.so.52
-  wget https://github.com/robertpro/tips/raw/59d14e7b148ebd10698ad3621b4c8a0bad38844b/packet_tracer_fedora26/libicui18n.so.52 -O ~/.lib64/libicui18n.so.52
-  wget https://github.com/robertpro/tips/raw/59d14e7b148ebd10698ad3621b4c8a0bad38844b/packet_tracer_fedora26/libicuuc.so.52 -O ~/.lib64/libicuuc.so.52
+    ```bash
+    mkdir ~/.lib64
+    wget https://github.com/robertpro/tips/raw/59d14e7b148ebd10698ad3621b4c8a0bad38844b/packet_tracer_fedora26/libicudata.so.52 -O ~/.lib64/libicudata.so.52
+    wget https://github.com/robertpro/tips/raw/59d14e7b148ebd10698ad3621b4c8a0bad38844b/packet_tracer_fedora26/libicui18n.so.52 -O ~/.lib64/libicui18n.so.52
+    wget https://github.com/robertpro/tips/raw/59d14e7b148ebd10698ad3621b4c8a0bad38844b/packet_tracer_fedora26/libicuuc.so.52 -O ~/.lib64/libicuuc.so.52
 
-  sudo sed -i "s|lib|lib:$HOME/.lib64|g" /opt/pt/packettracer
-  ```
+    sudo sed -i "s|lib|lib:$HOME/.lib64|g" /opt/pt/packettracer
+    ```
 
 9. Now to set the graphical launcher, let's edit the file `/usr/share/applications/pt7.desktop`.
 ```bash
