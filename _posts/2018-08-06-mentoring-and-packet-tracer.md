@@ -30,22 +30,21 @@ rpmbuild -bb openssl-lib-compat-1.0.0.spec
 error: Failed build dependencies:
 	perl is needed by openssl-lib-compat-1:1.0.0i-1.fc28.x86_64
 ```
-  Which I easily fixed installing Perl:
-  ```bash
-  dnf install perl
-  ```
-  But then the build command came to a compiler version issue that didn't have a trivial hack and would end up dragging me into a rabbit hole I'd rather avoid.
-  ```bash
-  annobin: cryptlib.c: Error: plugin built for compiler version (8.0.1) but run with compiler version (8.1.1)
-  cc1: error: fail to initialize plugin /usr/lib/gcc/x86_64-redhat-linux/8/plugin/annobin.so
-  ```
-  So I was lazy and used _BT0 Dot Ninja's_ package to get through with it:
-  One important point to notice is that the steps on that blog point to a `openssl` package that is not working, after digging around feedback in the blog I've found that these steps will get the package to solve the dependency:
-  ```bash
-  wget http://bt0.ninja/rpm/openssl-lib-compat-1.0.0i-1.fc25.x86_64.rpm
-
-  sudo rpm -ivh openssl-lib-compat-1.0.0i-1.fc25.x86_64.rpm
-  ```
+Which I easily fixed installing Perl:
+```bash
+dnf install perl
+```
+But then the build command came to a compiler version issue that didn't have a trivial hack and would end up dragging me into a rabbit hole I'd rather avoid.
+```bash
+annobin: cryptlib.c: Error: plugin built for compiler version (8.0.1) but run with compiler version (8.1.1)
+cc1: error: fail to initialize plugin /usr/lib/gcc/x86_64-redhat-linux/8/plugin/annobin.so
+```
+So I was lazy and used _BT0 Dot Ninja's_ package to get through with it:
+One important point to notice is that the steps on that blog point to a `openssl` package that is not working, after digging around feedback in the blog I've found that these steps will get the package to solve the dependency:
+```bash
+wget http://bt0.ninja/rpm/openssl-lib-compat-1.0.0i-1.fc25.x86_64.rpm
+sudo rpm -ivh openssl-lib-compat-1.0.0i-1.fc25.x86_64.rpm
+```
   This will do the trick.
 
 4. Get the Packet Tracer 7.1 package. I've got the one from [here](https://www.itechtics.com/download-cisco-packet-tracer-7-1-free-direct-download-links/), just scroll down and download the 7.1 version for linux, [or just click here](https://www.itechtics.com/?dl_id=24).
