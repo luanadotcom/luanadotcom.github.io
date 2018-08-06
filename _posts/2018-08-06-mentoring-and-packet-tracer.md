@@ -39,7 +39,6 @@ error: Failed build dependencies:
   annobin: cryptlib.c: Error: plugin built for compiler version (8.0.1) but run with compiler version (8.1.1)
   cc1: error: fail to initialize plugin /usr/lib/gcc/x86_64-redhat-linux/8/plugin/annobin.so
   ```
-
   So I was lazy and used _BT0 Dot Ninja's_ package to get through with it:
 
   One important point to notice is that the steps on that blog point to a `openssl` package that is not working, after digging around feedback in the blog I've found that these steps will get the package to solve the dependency:
