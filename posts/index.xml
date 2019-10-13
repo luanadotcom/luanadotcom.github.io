@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Overthinking blogging</title>
-    <link>https://luanadotcom.github.io/</link>
-    <description>Recent content on Overthinking blogging</description>
+    <title>Posts on Overthinking blogging</title>
+    <link>https://luanadotcom.github.io/posts/</link>
+    <description>Recent content in Posts on Overthinking blogging</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Sun, 13 Oct 2019 00:40:59 +0100</lastBuildDate>
     
-	<atom:link href="https://luanadotcom.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://luanadotcom.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
