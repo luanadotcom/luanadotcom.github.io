@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Overthinking blogging</title>
-    <link>https://luanadotcom.github.io/posts/</link>
+    <link>https://lngv.me/posts/</link>
     <description>Recent content in Posts on Overthinking blogging</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Sun, 13 Oct 2019 00:40:59 +0100</lastBuildDate>
     
-	<atom:link href="https://luanadotcom.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lngv.me/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First Post on Hugo</title>
-      <link>https://luanadotcom.github.io/posts/first-post-on-hugo/</link>
+      <link>https://lngv.me/posts/first-post-on-hugo/</link>
       <pubDate>Sun, 13 Oct 2019 00:40:59 +0100</pubDate>
       
-      <guid>https://luanadotcom.github.io/posts/first-post-on-hugo/</guid>
+      <guid>https://lngv.me/posts/first-post-on-hugo/</guid>
       <description>I had a play with Hugo recently and found the docs better than Jekyll&amp;rsquo;s (even though I&amp;rsquo;m using a Jekyll theme in this blog! 😅) and decided to give it a go. 😆</description>
     </item>
     
